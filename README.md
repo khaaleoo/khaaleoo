@@ -4,10 +4,12 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=khaaleoo&label=Profile%20views&color=0e75b6&style=flat" alt="khaaleoo" /> </p>
 
 
-<div style="display:flex"
+<div style="display:flex;"
 >
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=khaaleoo" alt="khaaleoo" /></a> </p>
-<a href="https://api.daily.dev/devcards/ebd545ae25774ceab3d586c4df478d20.png?r=lej"><img src="https://github.com/khaaleoo/khaaleoo/blob/main/devcard.svg" width="400" alt="Leo's Dev Card"/></a>
+<p align="left" style="flex:1"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=khaaleoo" alt="khaaleoo" /></a> </p>
+
+<a style="flex:1" href="https://api.daily.dev/devcards/ebd545ae25774ceab3d586c4df478d20.png?r=lej"><img src="https://github.com/khaaleoo/khaaleoo/blob/main/devcard.svg" width="400" alt="Leo's Dev Card"/></a>
+
 </div>
 
 - 📝 I regularly write articles on [https://viblo.asia/u/khaaleoo](https://viblo.asia/u/khaaleoo)
