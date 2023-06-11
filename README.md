@@ -1,10 +1,17 @@
+<style>
+td {
+    vertical-align: top;
+    padding: 6px 13px;
+}
+</style>
+
 <h1 align="center">Hi 👋, I'm Leo</h1>
 <h3 align="center">Software Engineer</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=khaaleoo&label=Profile%20views&color=0e75b6&style=flat" alt="khaaleoo" /> </p>
 
 <table>
- <tr>
+ <tr style="border:none">
     <td style="border:none;vertical-align:top;text-align:left"><p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=khaaleoo" alt="khaaleoo" /></a> </p></td>
     <td style="border:none;vertical-align:top;text-align:left"><a  href="https://api.daily.dev/devcards/ebd545ae25774ceab3d586c4df478d20.png?r=lej"><img src="https://github.com/khaaleoo/khaaleoo/blob/main/devcard.svg" width="400" alt="Leo's Dev Card"/></a></td>
  </tr>
