@@ -3,10 +3,10 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=khaaleoo&label=Profile%20views&color=0e75b6&style=flat" alt="khaaleoo" /> </p>
 
-<table border="0">
- <tr border="0">
-    <td border="0"><p align="left" style="vertical-align:top;text-align:left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=khaaleoo" alt="khaaleoo" /></a> </p></td>
-    <td border="0"><a style="vertical-align:top;text-align:left" href="https://api.daily.dev/devcards/ebd545ae25774ceab3d586c4df478d20.png?r=lej"><img src="https://github.com/khaaleoo/khaaleoo/blob/main/devcard.svg" width="400" alt="Leo's Dev Card"/></a></td>
+<table>
+ <tr>
+    <td><p align="left" style="border:none;vertical-align:top;text-align:left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=khaaleoo" alt="khaaleoo" /></a> </p></td>
+    <td><a style="border:none;vertical-align:top;text-align:left" href="https://api.daily.dev/devcards/ebd545ae25774ceab3d586c4df478d20.png?r=lej"><img src="https://github.com/khaaleoo/khaaleoo/blob/main/devcard.svg" width="400" alt="Leo's Dev Card"/></a></td>
  </tr>
 </table>
 
