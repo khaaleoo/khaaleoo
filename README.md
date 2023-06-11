@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-<a href="https://app.daily.dev/DailyDevTips"><img src="https://github.com/khaaleoo/khaaleoo/blob/master/devcard.svg" width="400" alt="Leo's Dev Card"/></a>
+<a href="https://api.daily.dev/devcards/ebd545ae25774ceab3d586c4df478d20.png?r=lej"><img src="https://github.com/khaaleoo/khaaleoo/blob/master/devcard.svg" width="400" alt="Leo's Dev Card"/></a>
 
 <!--
 **khaaleoo/khaaleoo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
