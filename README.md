@@ -7,7 +7,7 @@
 </div>
 
 ## 🌐 Connect with me via
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/kha-le-802026142) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/khaaleoo/) 
 <a href="https://viblo.asia/u/khaaleoo" target="_blank">
     <img width="75" height="20" src="https://viblo.asia//logo_full.svg"/>
 </a>
