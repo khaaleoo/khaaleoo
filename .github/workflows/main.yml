@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Generate README
-        uses: huantt/article-listing@v1.0.0
+      - name: Update articles
+        uses: huantt/article-listing@v1.1.0
         with:
           username: khaleo
           template-file: "README.md.template"
