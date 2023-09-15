@@ -34,6 +34,29 @@
 
 ## 📝 Articles
 
-- [Security Risk - Timing Attack - Challenging but Entirely Feasible](https://dev.to/khaleo/security-risk-timing-attack-challenging-but-entirely-feasible-1cd6) - 21/07/2023
-- [Rate Limiter in System Design. Part 2 - Commonly Used...](https://dev.to/khaleo/rate-limiter-in-system-design-part-2-commonly-used-algorithms-45bp) - 28/06/2023
-- [Rate Limiter in System Design - Part 1: Concepts and...](https://dev.to/khaleo/rate-limiter-in-system-design-part-1-concepts-and-applications-1b6n) - 26/06/2023
+<table>
+        <tr>
+            <td width="300px"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--pAxTlvSc--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ux69zikrk3wcsbdiucpz.png" alt="thumbnail"></td>
+            <td>
+                <a href="https://dev.to/khaleo/security-risk-timing-attack-challenging-but-entirely-feasible-1cd6">Security Risk - Timing Attack - Challenging but Entirely Feasible</a>
+                <div>Timing Attack is one of the techniques that hackers exploit by leveraging server-side computations to...</div>
+                <div><i>21/07/2023</i></div>
+            </td>
+        </tr>
+        <tr>
+            <td width="300px"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ACODi-we--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/obhqj1xdto3svp0xry4s.png" alt="thumbnail"></td>
+            <td>
+                <a href="https://dev.to/khaleo/rate-limiter-in-system-design-part-2-commonly-used-algorithms-45bp">Rate Limiter in System Design. Part 2 - Commonly Used...</a>
+                <div>In Part 1, I provided a general introduction at the conceptual level. In this Part 2, I will discuss...</div>
+                <div><i>28/06/2023</i></div>
+            </td>
+        </tr>
+        <tr>
+            <td width="300px"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--sIh7z1jm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3myab5f2bhaeu1ilzl2g.png" alt="thumbnail"></td>
+            <td>
+                <a href="https://dev.to/khaleo/rate-limiter-in-system-design-part-1-concepts-and-applications-1b6n">Rate Limiter in System Design - Part 1: Concepts and...</a>
+                <div>What is Rate Limiter   In the simplest terms, a Rate Limiter restricts the number of access...</div>
+                <div><i>26/06/2023</i></div>
+            </td>
+        </tr>
+</table>
