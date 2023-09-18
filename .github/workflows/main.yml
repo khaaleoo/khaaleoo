@@ -24,13 +24,17 @@ jobs:
           template-file: "README.md.template"
           out-file: "README.md"
           limit: 5
-      - name: Commit
+      - name: Check for changes
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "update articles"
-          git push origin main
+          if [[ $(git status --porcelain) ]]; then
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add .
+            git commit -m "update articles"
+            git push origin main
+          else
+            echo "No changes to commit. Exiting gracefully."
+          fi
 
   devcard:
     needs: update-articles
