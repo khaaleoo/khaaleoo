@@ -36,6 +36,14 @@
 
 <table>
         <tr>
+            <td width="300px"><img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frv0gqzh92sjqw94xk59v.png" alt="thumbnail"></td>
+            <td>
+                <a href="https://dev.to/khaleo/building-a-personal-blog-with-nextjs-and-notion-49mo">Building a personal blog with Next.js and Notion</a>
+                <div>In this article, we will together build the fastest blog for yourself with Next.js and Notion.       ...</div>
+                <div><i>21/06/2024</i></div>
+            </td>
+        </tr>
+        <tr>
             <td width="300px"><img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fux69zikrk3wcsbdiucpz.png" alt="thumbnail"></td>
             <td>
                 <a href="https://dev.to/khaleo/security-risk-timing-attack-challenging-but-entirely-feasible-1cd6">Security Risk - Timing Attack - Challenging but Entirely Feasible</a>
