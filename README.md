@@ -35,7 +35,7 @@
 
 <table>
         <tr>
-            <td width="300px"><img src="https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frv0gqzh92sjqw94xk59v.png" alt="thumbnail"></td>
+            <td width="300px"><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frv0gqzh92sjqw94xk59v.png" alt="thumbnail"></td>
             <td>
                 <a href="https://dev.to/khaleo/building-a-personal-blog-with-nextjs-and-notion-49mo">Building a personal blog with Next.js and Notion</a>
                 <div>In this article, we will together build the fastest blog for yourself with Next.js and Notion.       ...</div>
@@ -43,7 +43,7 @@
             </td>
         </tr>
         <tr>
-            <td width="300px"><img src="https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fux69zikrk3wcsbdiucpz.png" alt="thumbnail"></td>
+            <td width="300px"><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fux69zikrk3wcsbdiucpz.png" alt="thumbnail"></td>
             <td>
                 <a href="https://dev.to/khaleo/security-risk-timing-attack-challenging-but-entirely-feasible-1cd6">Security Risk - Timing Attack - Challenging but Entirely Feasible</a>
                 <div>Timing Attack is one of the techniques that hackers exploit by leveraging server-side computations to...</div>
@@ -51,7 +51,7 @@
             </td>
         </tr>
         <tr>
-            <td width="300px"><img src="https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fobhqj1xdto3svp0xry4s.png" alt="thumbnail"></td>
+            <td width="300px"><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fobhqj1xdto3svp0xry4s.png" alt="thumbnail"></td>
             <td>
                 <a href="https://dev.to/khaleo/rate-limiter-in-system-design-part-2-commonly-used-algorithms-45bp">Rate Limiter in System Design. Part 2 - Commonly Used...</a>
                 <div>In Part 1, I provided a general introduction at the conceptual level. In this Part 2, I will discuss...</div>
@@ -59,7 +59,7 @@
             </td>
         </tr>
         <tr>
-            <td width="300px"><img src="https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3myab5f2bhaeu1ilzl2g.png" alt="thumbnail"></td>
+            <td width="300px"><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3myab5f2bhaeu1ilzl2g.png" alt="thumbnail"></td>
             <td>
                 <a href="https://dev.to/khaleo/rate-limiter-in-system-design-part-1-concepts-and-applications-1b6n">Rate Limiter in System Design - Part 1: Concepts and...</a>
                 <div>What is Rate Limiter   In the simplest terms, a Rate Limiter restricts the number of access...</div>
