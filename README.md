@@ -35,6 +35,14 @@
 
 <table>
         <tr>
+            <td width="300px"><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy9rxwgamqkbm59hzifqj.png" alt="thumbnail"></td>
+            <td>
+                <a href="https://dev.to/khaleo/golang-design-patterns-proxy-2ni9">Golang Design Patterns - Proxy</a>
+                <div>I. Proxy - Structural Pattern   The Proxy is a familiar Design Pattern for developers, used...</div>
+                <div><i>04/02/2025</i></div>
+            </td>
+        </tr>
+        <tr>
             <td width="300px"><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frv0gqzh92sjqw94xk59v.png" alt="thumbnail"></td>
             <td>
                 <a href="https://dev.to/khaleo/building-a-personal-blog-with-nextjs-and-notion-49mo">Building a personal blog with Next.js and Notion</a>
