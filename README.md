@@ -18,14 +18,6 @@
   <img src="https://skillicons.dev/icons?i=js,ts,go,html,css,react,nextjs,tailwind,nodejs,nestjs,postgres,mongodb,redis,aws,gcp,cloudflare,vercel,docker,figma,git" alt="Tech stack"/>
 </p>
 
-## 🚀 Featured Project
-
-**[notion-nextjs-mini-kit](https://github.com/khaaleoo/notion-nextjs-mini-kit)** — a simple and efficient way to connect Next.js apps with Notion to access and display data. It's the kit that powers [my own blog](https://lexuankha.com).
-
-<a href="https://github.com/khaaleoo/notion-nextjs-mini-kit"><img src="https://img.shields.io/github/stars/khaaleoo/notion-nextjs-mini-kit?style=flat-square&logo=github&color=yellow" alt="Stars"/></a>
-
-More on my [repositories page →](https://github.com/khaaleoo?tab=repositories)
-
 ## 📊 GitHub Stats
 
 <p align="center">
