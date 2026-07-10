@@ -23,19 +23,15 @@ const HACKERRANK_PROFILE_URL = `https://www.hackerrank.com/profile/${HACKERRANK_
 
 const USER_AGENT = "Mozilla/5.0 (compatible; readme-profile-sync/1.0)";
 
-// CodinGame's own documented rank-title thresholds (codingame.com/help/rank).
-const LEAGUE_THRESHOLDS = [
-  { maxRank: 100, name: "Guru" },
-  { maxRank: 500, name: "Grand Master" },
-  { maxRank: 2500, name: "Master" },
-  { maxRank: 5000, name: "Mentor" },
-  { maxRank: 10000, name: "Disciple" },
-  { maxRank: 20000, name: "Crafter" },
-];
-
-function leagueForRank(rank) {
-  const tier = LEAGUE_THRESHOLDS.find(({ maxRank }) => rank <= maxRank);
-  return tier ? tier.name : "Rookie";
+// Formats a percentile with just enough precision to stay meaningful at very
+// small values (e.g. top-100-of-a-million ranks round to "0%" at 0 decimals),
+// trimming trailing zeros so "0.010" reads as "0.01".
+function formatPercentile(rank, total) {
+  const percent = (rank / total) * 100;
+  if (percent < 0.01) return String(parseFloat(percent.toFixed(3)));
+  if (percent < 1) return String(parseFloat(percent.toFixed(2)));
+  if (percent < 10) return String(parseFloat(percent.toFixed(1)));
+  return String(Math.ceil(percent));
 }
 
 function replaceBetweenMarkers(content, marker, newBlock) {
@@ -67,7 +63,9 @@ function shieldBadgeMessage(text) {
 }
 
 async function fetchCodinGameStats() {
-  const res = await fetch(
+  // Step 1: resolve the numeric codingamerId behind the public handle (also
+  // gives us Level, which isn't tied to any specific ranking mode).
+  const profileRes = await fetch(
     "https://www.codingame.com/services/CodinGamerRemoteService/findCodingamePointsStatsByHandle",
     {
       method: "POST",
@@ -75,29 +73,61 @@ async function fetchCodinGameStats() {
       body: JSON.stringify([CODINGAME_HANDLE]),
     },
   );
-  if (!res.ok) {
-    throw new Error(`CodinGame API request failed: HTTP ${res.status}`);
+  if (!profileRes.ok) {
+    throw new Error(`CodinGame profile API request failed: HTTP ${profileRes.status}`);
   }
-  const data = await res.json();
+  const profileData = await profileRes.json();
   // The endpoint sometimes wraps the payload in a "success" key and
   // sometimes returns it unwrapped, depending on caller headers.
-  const payload = data.success ?? data;
-  const rank = payload?.codingamer?.rank;
-  const level = payload?.codingamer?.level;
-  const totalGlobal = payload?.codingamePointsRankingDto?.numberCodingamersGlobal;
-  if (!rank || !totalGlobal) {
-    throw new Error("CodinGame API response missing expected fields");
+  const profilePayload = profileData.success ?? profileData;
+  const codingamerId = profilePayload?.codingamer?.userId;
+  const level = profilePayload?.codingamer?.level;
+  if (!codingamerId) {
+    throw new Error("CodinGame profile API response missing codingamerId");
   }
-  const percent = Math.max(1, Math.ceil((rank / totalGlobal) * 100));
-  return { rank, level, percent, league: leagueForRank(rank) };
+
+  // Step 2: Clash of Code-specific rank, both global and within-country.
+  // This is a different ranking pool than the "general leaderboard" rank
+  // (and its Guru/Master/.../Rookie league titles), so we don't reuse those
+  // titles here.
+  const rankRes = await fetch("https://www.codingame.com/services/CodinGamer/FindRankingPoints", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "User-Agent": USER_AGENT },
+    body: JSON.stringify([codingamerId]),
+  });
+  if (!rankRes.ok) {
+    throw new Error(`CodinGame ranking API request failed: HTTP ${rankRes.status}`);
+  }
+  const rankData = await rankRes.json();
+  const rankPayload = rankData.success ?? rankData;
+
+  const rank = rankPayload?.clashPointsRankGlobal;
+  const totalGlobal = rankPayload?.totalCodingamerGlobal?.clash;
+  const countryRank = rankPayload?.clashPointsRankCountry;
+  const totalCountry = rankPayload?.totalCodingamerCountry?.clash;
+  const countryId = rankPayload?.countryId;
+  if (!rank || !totalGlobal) {
+    throw new Error("CodinGame ranking API response missing expected fields");
+  }
+
+  return {
+    level,
+    rank,
+    percentile: formatPercentile(rank, totalGlobal),
+    countryRank,
+    countryId,
+    hasCountryRank: Boolean(countryRank && totalCountry),
+  };
 }
 
 async function updateCodinGameBadge(readmeContent, stats) {
-  const message = shieldBadgeMessage(`Top ${stats.percent}% | ${stats.league} League`);
+  const parts = [`Clash #${stats.rank}`, `Top ${stats.percentile}%`];
+  if (stats.hasCountryRank) parts.push(`${stats.countryId} #${stats.countryRank}`);
+  const message = shieldBadgeMessage(parts.join(" | "));
   const badge =
     `<a href="${CODINGAME_PROFILE_URL}"><img src="https://img.shields.io/badge/CodinGame-${message}` +
-    `-F2BB13?style=flat-square&logo=codingame&logoColor=white" alt="CodinGame Rank"/></a>`;
-  console.log(`CodinGame: rank #${stats.rank} -> top ${stats.percent}%, ${stats.league} league`);
+    `-F2BB13?style=flat-square&logo=codingame&logoColor=white" alt="CodinGame Clash of Code Rank"/></a>`;
+  console.log(`CodinGame: Clash rank #${stats.rank} -> top ${stats.percentile}%${stats.hasCountryRank ? `, ${stats.countryId} #${stats.countryRank}` : ""}`);
   return replaceBetweenMarkers(readmeContent, "CODINGAME", badge);
 }
 
@@ -214,8 +244,10 @@ async function main() {
 
   await writeStepOutputs({
     codingame_rank: codinGameStats.rank,
-    codingame_percent: codinGameStats.percent,
-    codingame_league: codinGameStats.league,
+    codingame_percent: codinGameStats.percentile,
+    codingame_country: codinGameStats.hasCountryRank
+      ? `${codinGameStats.countryId} #${codinGameStats.countryRank}`
+      : "n/a",
     hackerrank_level: hackerRankStats.level,
     hackerrank_badges: hackerRankStats.badges,
     hackerrank_certifications: hackerRankStats.certifications,

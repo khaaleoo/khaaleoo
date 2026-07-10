@@ -50,11 +50,11 @@ jobs:
       - name: Notify Telegram
         if: success() && env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
         run: |
-          MESSAGE=$(printf '✅ Coding profiles synced (%s)\n\n🎮 CodinGame: rank #%s · top %s%% · %s league\n🏅 HackerRank: level %s · %s badges · %s certifications\n📝 README updated: %s' \
+          MESSAGE=$(printf '✅ Coding profiles synced (%s)\n\n🎮 CodinGame Clash of Code: rank #%s · top %s%% · %s\n🏅 HackerRank: level %s · %s badges · %s certifications\n📝 README updated: %s' \
             "$(date -u +'%Y-%m-%d %H:%M UTC')" \
             "${{ steps.sync.outputs.codingame_rank }}" \
             "${{ steps.sync.outputs.codingame_percent }}" \
-            "${{ steps.sync.outputs.codingame_league }}" \
+            "${{ steps.sync.outputs.codingame_country }}" \
             "${{ steps.sync.outputs.hackerrank_level }}" \
             "${{ steps.sync.outputs.hackerrank_badges }}" \
             "${{ steps.sync.outputs.hackerrank_certifications }}" \
