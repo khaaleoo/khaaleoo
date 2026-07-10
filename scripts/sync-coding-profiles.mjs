@@ -113,21 +113,37 @@ async function fetchCodinGameStats() {
   return {
     level,
     rank,
+    total: totalGlobal,
     percentile: formatPercentile(rank, totalGlobal),
     countryRank,
+    countryTotal: totalCountry ?? null,
     countryId,
     hasCountryRank: Boolean(countryRank && totalCountry),
   };
 }
 
+// Compact player-pool size for badge text (e.g. 917805 -> "918K").
+function formatPoolSize(total) {
+  if (total >= 1_000_000) return `${parseFloat((total / 1_000_000).toFixed(1))}M`;
+  if (total >= 1_000) return `${Math.round(total / 1_000)}K`;
+  return String(total);
+}
+
 async function updateCodinGameBadge(readmeContent, stats) {
-  const parts = [`Clash #${stats.rank}`, `Top ${stats.percentile}%`];
-  if (stats.hasCountryRank) parts.push(`${stats.countryId} #${stats.countryRank}`);
+  const parts = [`#${stats.rank}/${formatPoolSize(stats.total)}`, `Top ${stats.percentile}%`];
+  if (stats.hasCountryRank) {
+    parts.push(`${stats.countryId} #${stats.countryRank}/${formatPoolSize(stats.countryTotal)}`);
+  }
   const message = shieldBadgeMessage(parts.join(" | "));
   const badge =
     `<a href="${CODINGAME_PROFILE_URL}"><img src="https://img.shields.io/badge/CodinGame-${message}` +
     `-F2BB13?style=flat-square&logo=codingame&logoColor=white" alt="CodinGame Clash of Code Rank"/></a>`;
-  console.log(`CodinGame: Clash rank #${stats.rank} -> top ${stats.percentile}%${stats.hasCountryRank ? `, ${stats.countryId} #${stats.countryRank}` : ""}`);
+  console.log(
+    `CodinGame: Clash #${stats.rank}/${stats.total.toLocaleString()} -> top ${stats.percentile}%` +
+      (stats.hasCountryRank
+        ? `, ${stats.countryId} #${stats.countryRank}/${stats.countryTotal.toLocaleString()}`
+        : ""),
+  );
   return replaceBetweenMarkers(readmeContent, "CODINGAME", badge);
 }
 
