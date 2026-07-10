@@ -42,5 +42,5 @@
 ---
 
 <p align="center">
-  📫 Open to interesting backend / full-stack opportunities — <a href="mailto:khalx.se@gmail.com">khalx.se@gmail.com</a>
+  📫 Open to interesting backend / full-stack opportunities — <a href="mailto:khalx.se@gmail.com">khalx.leo@gmail.com</a>
 </p>
