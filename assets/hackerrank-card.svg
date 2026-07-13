@@ -1,7 +1,7 @@
-<svg width="480" height="252" viewBox="0 0 480 252" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect width="480" height="252" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+<svg width="480" height="274" viewBox="0 0 480 274" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="480" height="274" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
   <text x="20" y="30" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#ffffff">HackerRank &#183; khaaleoo</text>
-  <text x="20" y="52" font-family="Segoe UI, sans-serif" font-size="12" fill="#8b949e">Level 5 &#183; 5 badges &#183; 12 certifications</text>
+  <text x="20" y="52" font-family="Segoe UI, sans-serif" font-size="12" fill="#8b949e">Level 5 &#183; 5 badges &#183; 13 certifications</text>
   <text x="20" y="85" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#8b949e">CERTIFICATIONS</text>
   <g transform="translate(20, 110)">
       <a xlink:href="https://downloads.hackerrank.com/certificates/f3fa6daa3642" target="_blank">
@@ -74,6 +74,12 @@
         <g transform="translate(230, 110)">
           <circle cx="4" cy="-4" r="3" fill="#00EA64"/>
           <text x="12" y="0" font-family="Segoe UI, sans-serif" font-size="11" fill="#58a6ff">SQL (Intermediate)</text>
+        </g>
+      </a>
+      <a xlink:href="https://s3.us-east-1.amazonaws.comdownloads.hackerrank.com/certificates/65b6b28a5e5f" target="_blank">
+        <g transform="translate(0, 132)">
+          <circle cx="4" cy="-4" r="3" fill="#00EA64"/>
+          <text x="12" y="0" font-family="Segoe UI, sans-serif" font-size="11" fill="#58a6ff">SQL (Advanced)</text>
         </g>
       </a>
   </g>
