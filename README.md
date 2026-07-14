@@ -18,6 +18,13 @@
   <img src="https://skillicons.dev/icons?i=js,ts,go,html,css,react,nextjs,tailwind,nodejs,nestjs,postgres,mongodb,redis,aws,gcp,cloudflare,vercel,docker,figma,git" alt="Tech stack"/>
 </p>
 
+## 🌱 Open Source Contributions
+
+<p align="center">
+  <a href="https://github.com/firebase/firebase-js-sdk"><img src="https://img.shields.io/github/stars/firebase/firebase-js-sdk?style=flat-square&logo=firebase&logoColor=FFCA28&label=firebase%2Ffirebase-js-sdk&color=24292f" alt="firebase/firebase-js-sdk"/></a>
+  <a href="https://github.com/splitbee/react-notion"><img src="https://img.shields.io/github/stars/splitbee/react-notion?style=flat-square&logo=react&logoColor=61DAFB&label=splitbee%2Freact-notion&color=24292f" alt="splitbee/react-notion"/></a>
+</p>
+
 ## 📊 GitHub Stats
 
 <p align="center">
