@@ -168,6 +168,7 @@ async function fetchHackerRankData() {
   const badges = badgesRes.ok ? (await badgesRes.json()).models ?? [] : [];
   const certsRaw = certsRes.ok ? (await certsRes.json()).data ?? [] : [];
 
+  // Senior profile: skip Basic skill certs; keep Intermediate/Advanced and role certs.
   const certificates = certsRaw
     .filter((entry) => entry.attributes?.status === "test_passed")
     .map((entry) => {
@@ -182,7 +183,8 @@ async function fetchHackerRankData() {
         name: rawName.replace(/\s*\(\)\s*$/, ""),
         url: entry.attributes.certificate_image ?? HACKERRANK_PROFILE_URL,
       };
-    });
+    })
+    .filter((cert) => !/\(Basic\)/i.test(cert.name));
 
   return { profile, badges, certificates };
 }
