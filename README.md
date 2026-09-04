@@ -36,7 +36,7 @@
 
 <p align="center">
   <!-- CODINGAME:START -->
-  <a href="https://www.codingame.com/profile/1d7e8bf46674460ac34284a01afae5539876004"><img src="https://img.shields.io/badge/CodinGame-%23176%2F929K_%7C_Top_0.02%25_%7C_VN_%233%2F16K-F2BB13?style=flat-square&logo=codingame&logoColor=white" alt="CodinGame Clash of Code Rank"/></a>
+  <a href="https://www.codingame.com/profile/1d7e8bf46674460ac34284a01afae5539876004"><img src="https://img.shields.io/badge/CodinGame-%23198%2F929K_%7C_Top_0.02%25_%7C_VN_%233%2F16K-F2BB13?style=flat-square&logo=codingame&logoColor=white" alt="CodinGame Clash of Code Rank"/></a>
   <!-- CODINGAME:END -->
 </p>
 
